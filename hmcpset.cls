@@ -6,14 +6,10 @@
     [2005/03/10 v0.04 HMC Math Dept problem set class]
 
 %%% INITIAL CODE ----------------------------------------------------------
-%% Flag for compilation to PDF
-\newif\ifpdf
-\ifx\pdfoutput\undefined
-    \pdffalse
-\else
-    \pdfoutput = 1
-    \pdftrue
-\fi
+
+% test whether the document is being compiled with PDFTeX
+\RequirePackage{ifpdf}
+
 
 %%% DECLARATION OF OPTIONS ------------------------------------------------
 %% Header Options: header*, no header
@@ -70,6 +66,7 @@
 %%% PACKAGE LOADING -------------------------------------------------------
 %% based on std article class
 \LoadClass{article}
+
 
 %% Font loading: Palatino text/math fonts
 \ifhmcpset@palatino
